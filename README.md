@@ -82,4 +82,4 @@ A JSON file with detected signals and cluster summaries
 
 A text/Markdown report that highlights the most important findings
 
-Clear explanations that non-technical reviewers can understand
+Clear explanations that non-technical reviewers can understand.
