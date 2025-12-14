@@ -28,6 +28,8 @@ Our system acts as an early-warning and prioritization engine for drug safety.
 4. Use LLMs to summarize and classify risk
 5. Generate a weekly safety dashboard
 
+🌍 Regulatory Applicability:
+While FAERS data is used for demonstration, the system can be adapted to India’s PvPI datasets and WHO-UMC VigiBase, making it globally scalable.
 
 
 ## Tech Stack
