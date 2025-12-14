@@ -1,27 +1,42 @@
-Pharmacovigilance Signal Detection Agent
-Introduction:
 
-This project aims to build an AI-based system that can automatically detect early drug safety signals from adverse event (AE) data. Today, pharmacovigilance teams manually review huge datasets like FAERS reports, medical literature, and safety bulletins. This process is slow and makes it easy to miss early warning signs.
+# Pharmacovigilance Signal Detection Agent 🚨
 
-Our goal is to use LLMs and machine learning to make this process faster, smarter, and more reliable.
+Early detection of drug safety risks using AI-driven signal detection
+to support FDA and WHO analysts in protecting public health.
 
-Problem We Are Solving
+## Problem Statement
 
-Millions of adverse events are reported every year, but identifying real safety issues hidden inside this data is difficult. Manual analysis is time-consuming, and weak signals often go unnoticed.
+Regulatory agencies like the FDA and WHO receive millions of adverse
+event reports every year. Manual review is slow and often detects
+safety risks too late, after patients are already harmed.
 
-We want to build a system that can:
+## Why This Matters
 
-Read and analyze structured and unstructured AE reports
+Delayed detection of adverse drug reactions can lead to:
+- Patient harm
+- Costly drug recalls
+- Loss of public trust
 
-Group similar cases together using clustering
+Our system acts as an early-warning and prioritization engine for drug safety.
 
-Detect patterns like unexpected reactions or rising trends
 
-Summarize potential risks using an LLM
+## Solution Overview
 
-Produce a simple weekly dashboard with key signals
+1. Ingest FAERS adverse event data
+2. Convert reports into embeddings
+3. Cluster events to detect emerging patterns
+4. Use LLMs to summarize and classify risk
+5. Generate a weekly safety dashboard
 
-This helps pharmacovigilance teams act early and make better safety decisions.
+
+
+## Tech Stack
+
+- Python, Pandas
+- scikit-learn (DBSCAN / HDBSCAN)
+- LLMs (LangChain)
+- FAISS / Chroma (Vector DB)
+- React + Recharts (Dashboard)
 
 Our Solution
 
@@ -83,3 +98,22 @@ A JSON file with detected signals and cluster summaries
 A text/Markdown report that highlights the most important findings
 
 Clear explanations that non-technical reviewers can understand...
+
+## Sample Output
+
+```json
+{
+  "drug": "Drug X",
+  "signal": "Hepatotoxicity",
+  "risk_level": "High",
+  "trend": "Increasing"
+}
+
+
+***Note:
+The outputs/ and dashboard.json files are generated artifacts and are intentionally not committed to the GitHub repo.
+They are created when the pipeline is executed locally from the FAERS data.
+This is standard practice in real-world ML / PV systems.
+The large datasets are added into gitignore as large datasets aren't accepted by the github.
+
+
